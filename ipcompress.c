@@ -50,7 +50,7 @@ void print_tree(struct tree* upto, int level, double threshold) {
                 continue;
             }
 
-            if (calc >= threshold) {
+            if (calc >= threshold && level <= 24) {
                 //for (int i = 0; i < level; ++i) putc(' ', stdout);
                 //printf("%c - count: %d/%lu [%f] - %x - %d\n", (bit ? '1' : '0'), upto->sub_nodes, (1UL<<(31-level)), calc, ip, level + 1);
                 int a = (ip >> 24) & 0xff;
